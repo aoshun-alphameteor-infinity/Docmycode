@@ -9,5 +9,6 @@
 		void Close(FILE* file);
 		
 		char* GetLine(FILE* input);
+		int WriteString(FILE* output,char* string);
 
 #endif

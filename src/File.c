@@ -20,3 +20,12 @@ char* GetLine(FILE* input){
 	  return line;
 	  }
 	 
+int WriteString(FILE* output,char* string){
+	int lenght, check;
+	if(output==NULL)return EXIT_FAILURE;
+	if(string==NULL)return EXIT_SUCCESS;
+	lenght=strlen(string);
+	check=fwrite(string, sizeof(char), lenght, output);
+	if(check==sizeof(char)*lenght)return EXIT_SUCCESS;
+	else return EXIT_FAILURE;
+	}

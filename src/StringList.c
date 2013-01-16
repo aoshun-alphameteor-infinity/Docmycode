@@ -10,14 +10,28 @@ StringList* newStringList (void){
      }
         
 void freeStringList (StringList* strlist){
+     freecontentofStringList(strlist);
+     free(strlist);
+     }
+
+void reinitStringList (Stringlist* strlist){
+     freecontentofStringList(strlist);
+     strlist->size=0;
+     }
+
+int addtoStringList (StringList* strlist, char* String){
+    StringCell* tmp=strlist->first;
+    int i;
+    for(i=1;i<=strlist->size;i++)tmp=tmp->suivant;
+    tmp->suivant=newStringCell(String);
+    if(tmp->suivant!=NULL){strlist->size+=1;return EXIT_SUCCESS;}
+    return EXIT_FAILURE;
+    }
+
+void freecontentofStringList (Stringlist* strlist){
      int i;
      StringCell* tmp=strlist->first;
      for(i=1;i<strlist->size;i++)tmp=tmp->suivant;     
      for(i=strlist->size-1;i>0;i--)freeStringCell(tmp->suivant);
-     free(tmp);
-     free(strlist);
+     free(tmp);     
      }
-
-void reinitStringList (Stringlist* strlist);
-
-int addtoStringList (StringList* strlist);

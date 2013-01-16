@@ -29,3 +29,4 @@ int WriteString(FILE* output,char* string){
 	if(check==sizeof(char)*lenght)return EXIT_SUCCESS;
 	else return EXIT_FAILURE;
 	}
+

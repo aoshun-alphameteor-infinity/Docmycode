@@ -35,3 +35,17 @@ void freecontentofStringList (Stringlist* strlist){
      for(i=strlist->size-1;i>0;i--)freeStringCell(tmp->suivant);
      free(tmp);     
      }
+
+StringCell* newStringCell (char* String){
+     StringCell* tmp=(StringCell*)malloc(sizeof(StringCell));
+     if(tmp!=NULL){
+                   tmp->string=String;
+                   tmp->size=strlen(String);
+                   }
+     return tmp;       
+     }
+
+void freeStringCell (StringCell* cell){
+     free(cell->String);
+     free(cell);
+     }

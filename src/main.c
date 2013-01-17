@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "Site.h"
+#include "File.h"
+#include "StringList.h"
 
 int main (int argc, char* argv[]){
 FILE* f=NULL;

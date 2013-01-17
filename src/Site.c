@@ -1,6 +1,6 @@
-
 #include <stdio.h>
 #include <stdlib.h>
+#include "Site.h"
 
 FILE* init_site(){
 FILE* f=fopen("index.html","w+");

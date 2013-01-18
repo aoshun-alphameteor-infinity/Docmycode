@@ -1,5 +1,10 @@
 #include "Comment.h"
 
+/**
+\fn Comment* newComment()
+\return a pointer on the Comment structure which be allocated
+\brief a function for allocate Comment structure
+*/
 Comment* newComment (){
          Comment* tmp=(Comment*)malloc(sizeof(Comment));
          if (tmp!=NULL){
@@ -18,6 +23,12 @@ Comment* newComment (){
          return tmp;
          }
 
+
+/**
+   \fn void freeComment (Comment* comment)
+   \param the comment structure wich need to be free.
+   \brief a function in order to free a Comment structure.
+*/
 void freeComment (Comment* comment){
      free(tmp->author);
      free(tmp->version);

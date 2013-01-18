@@ -11,9 +11,9 @@ void close(FILE* file){
 	 }
 	 
 char* GetLine(FILE* input){
-	  char buffer[100];
+	  char buffer[1000];
 	  char* line;
-	  fgets(buffer,100,input);
+	  fgets(buffer,1000,input);
 	  line=(char*)malloc(sizeof(char)*(1+strlen(buffer)));
 	  if(line==NULL)return NULL;
 	  strcpy(line,buffer);

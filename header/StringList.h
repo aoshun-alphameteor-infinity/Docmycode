@@ -24,7 +24,7 @@
         StringList* newStringList (void);
         void freeStringList (StringList* strlist);
         void reinitStringList (Stringlist* strlist);
-        int addtoStringList (StringList* strlist);
+        int addtoStringList (StringList* strlist, char* String);
         
         StringCell* newStringCell (char* String);
         void freeStringCell (StringCell* cell);

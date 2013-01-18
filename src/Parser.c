@@ -17,7 +17,7 @@ int ParseFile (FILE* file, Comment* result){
                         if(test==1 && (c=='/' || c=='*')){tmp=c;test++;}
                         else test=0;
                         if(test==2 && (c=='/' || c=='*') && c=tmp){
-                                   result[count]=ParseComment(file,'/');
+                                   result[count]=ParseComment(file,tmp);
                                    count++;
                                    test=0;
                                    }

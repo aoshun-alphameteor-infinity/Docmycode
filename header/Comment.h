@@ -13,7 +13,6 @@
                char* fn;
                char* return_value;
                char* bug;
-               char* file;
                StringList* parameters;
                }
                
